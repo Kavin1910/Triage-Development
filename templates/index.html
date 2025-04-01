@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRI Triage System</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>MRI Triage System</h1>
+        </header>
+
+        <div class="tabs">
+            <div class="tab active" data-tab="new-analysis">New Analysis</div>
+            <div class="tab" data-tab="upload">Upload Image</div>
+            <div class="tab" data-tab="history">History</div>
+        </div>
+
+        <div class="tab-content active" id="new-analysis-content">
+            <button id="fetchImagesBtn" class="file-input-label">
+                Fetch & Analyze Images
+            </button>
+            <div id="statusMessage"></div>
+            <div id="results" class="result-grid"></div>
+        </div>
+
+        <div class="tab-content" id="upload-content">
+            <div class="upload-section">
+                <div class="file-input-wrapper">
+                    <input type="file" id="fileInput" class="file-input" accept="image/*" multiple>
+                    <label for="fileInput" class="file-input-label">
+                        Select MRI Images
+                    </label>
+                    <div id="fileList" class="file-list">No files selected</div>
+                </div>
+                <div class="button-group">
+                    <button id="uploadBtn" class="file-input-label">Upload & Analyze</button>
+                    <button id="clearFilesBtn" class="file-input-label" style="background-color: #7f8c8d;">Clear Selection</button>
+                </div>
+            </div>
+            <div id="uploadStatusMessage"></div>
+            <div id="uploadResults" class="result-grid"></div>
+        </div>
+
+        <div class="tab-content" id="history-content">
+            <div id="historyResults" class="result-grid"></div>
+        </div>
+    </div>
+
+    <script src="static/js/main.js"></script>
+</body>
+</html>

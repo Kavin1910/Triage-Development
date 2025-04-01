@@ -1,0 +1,8 @@
+flask
+python-dotenv
+google-generativeai
+dropbox
+supabase
+apscheduler
+azure-storage-blob
+gunicorn
